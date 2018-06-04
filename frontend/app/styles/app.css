@@ -1,0 +1,415 @@
+.header {
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: #4257b2;
+}
+
+.d_logo {
+	padding: 20px 40px 0px 40px;
+}
+
+.tools {
+	/*height: 700px;*/
+}
+
+.widget {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	width: 1300px !important;
+	max-width: 1300px;
+}
+
+/*.widget>div {
+	padding: 20px;
+}*/
+
+.widget>div>div>div {
+	border-style: dashed;
+	border-width: 4px;
+	border-color: #09f6c4;
+	text-align: center;
+	padding: 15%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.create {
+	font-size: 30px;
+	color: black;
+}
+
+.edit div  {
+	color: black;
+	font-size: 20px;
+}
+
+.public {
+	color: black;
+	font-size: 20px;
+}
+
+.light {
+	width: 100%;
+}
+.introduction {
+	font-family: hurme_no2-webfont,-apple-system,BlinkMacSystemFont,sans-serif;
+	width: calc(99.99% * 6/12 - (32px - 32px * 6/12));
+	color: #455358;
+	padding-bottom: 10%;
+}
+.tools {
+	text-align: right;
+	margin-left: calc(99.99% * (-5/12 * -1) - (32px - 32px * (-1/12 * -1)) + 32px) !important;
+	position: relative;
+}
+.heading {
+	font-weight: bolder;
+	font-size: 5.0rem;
+	line-height: 65px;
+	padding-bottom: 30px;
+	font-family: hurme_no2-webfont;
+}
+.splash {
+	padding-top: 30%;
+}
+.started {
+	padding: 20px 0px;
+	margin-top: 30px;
+}
+.back_image {
+	height: 20.5rem;
+}
+.results > div {
+	margin-top: 5%;
+	margin-right: 20px;
+	padding-bottom: 7px;
+}
+
+.listing:hover {
+	background-color: #42c2f4;
+	transition: 0.7s;
+}
+
+/*.results > div:hover {
+	background-color: blue;
+	transition: 0.7s;
+}*/
+.detailed_pack {
+	padding: 10px;
+}
+.user_image {
+	width: 10px;
+	height: 10px;
+}
+/*.detailed_pack {
+	column-count: 3;
+}*/
+.results>div {
+	display: inline-block;
+}
+.title {
+	line-height: 20px;
+	margin-right: 20px;
+	font-size: 20px;
+	border: none;
+	border-bottom: solid;
+	padding: 10px;
+	outline: none;
+}
+.title:hover {
+	transition: 0.7s;
+	border-bottom-color: #3ccfcf;
+}
+.short_description {
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.options {
+	padding: 20px;
+}
+.toggle {
+	padding-top: 30px;
+}
+.search_question {
+	padding: 10px;
+	font-size: 20px;
+}
+.question, .answer {
+	border-bottom-style: solid;
+	border-bottom-color: #3ccfcf;
+}
+.answer_image {
+	width: 20px;
+	height: 20px;
+	border: solid 1px #d7cccc;
+	float: right;
+	margin-top: 1%;
+	box-shadow: 0 0.3125rem 1rem 0 rgba(0,0,0,0.4);
+}
+.line {
+	height: 1px;
+	border-bottom: solid 2px #bdb7b7;
+	padding-top: 20px;
+}
+.input_question {
+	border: none;
+	outline: none;
+}
+.input_answer {
+	border: none;
+	outline: none;
+}
+.add_question {
+	padding-top: 30px;
+	font-size: 20px;
+}
+.block1 {
+	padding-bottom: 30px;
+}
+.sidebar {
+	/*height: 800px;*/
+	text-align: center;
+	box-shadow: 0.3125rem 0 1.25rem 0 rgba(0,0,0,0.28);
+}
+.cards {
+	margin-top: 30%;
+}
+#myProgress {
+	margin-top: 20px;
+  	width: 100%;
+  	background-color: #ddd;
+}
+
+#myBar {
+  	width: 1%;
+  	height: 15px;
+  	background-color: #4CAF50;
+}
+.button_group {
+	margin-top: 240%;
+	margin-bottom: 40%;
+	/*position: absolute;*/
+	/*top: auto !important;*/
+
+}
+.button_group>div>button {
+	margin-top: 20px;
+	width: 100%;
+	color: #3ccfcf;
+	font-weight: bolder;
+	padding: 12px;
+	border: solid 1px;
+	border-radius: 0px;
+}
+.button_group>div>button:focus {
+	color: #ffcd1f;
+}
+.flash_header {
+	text-align: center;
+	color: black;
+}
+.flashcard {
+	font-size: 20px;
+}
+/*.second_body {
+	background: url(../public/assets/image/splash-laptop-desktop.BwuW.jpg) no-repeat;
+    background-size: 100%;
+}*/
+#powerselect {
+	outline: none;
+}
+
+.cls_undernone .cls_underimg {
+	text-decoration: none !important;
+}
+.cls_createfont {
+	font-weight: 700;
+	font-family: 'hurme_no2-webfont' !important;
+}
+
+.cls_hurmefont {
+	font-family: 'hurme_no2-webfont' !important;	
+}
+
+.cls_fullheight {
+	height: 85.5vh;
+}
+
+.cls_toggleinput1 {
+	border: none;
+	background-color: white;
+	font-weight: 600;
+	font-family: 'hurme_no2-webfont' !important;
+	font-size: 17px;	
+	text-transform: uppercase;
+}
+
+.cls_toggleinput2 {
+	border: none;
+	background-color: white;
+	font-weight: 600;
+	font-family: 'hurme_no2-webfont' !important;
+	font-size: 17px;	
+	margin-top: 2%;
+	text-transform: uppercase;
+}
+
+.cls_createbtn {
+	font-weight: 600;
+	font-family: 'hurme_no2-webfont' !important;
+}
+
+.cls_fontfamily {
+	font-family: 'hurme_no2-webfont' !important;
+}
+
+.cls_flashcardheader {
+	font-weight: 600;
+	color: #1d59ea;
+}
+
+.cls_fontweight {
+	font-weight: 600;
+}
+
+.cls_addquestion {
+	font-weight: 600;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.cls_toggle1 {
+	font-size: 17px;
+}
+
+.cls_toggle2 {
+	margin-top: 2%;
+	font-size: 17px;
+}
+
+.cls_question {
+	text-align: center;
+}
+
+.cls_powerselect {
+	font-size: 17px !important;
+	outline: none !important;
+}
+
+.cls_power {
+	padding-left: 5% !important;
+	padding-right: 5% !important;
+}
+
+.cls_btncreate {
+	margin-top: 40px;
+	float: right;
+	margin-bottom: 60px;
+	margin-right: 60px;
+	outline: none !important;
+}
+<<<<<<< HEAD
+#manual {
+	display: ;
+}
+#auto {
+	/*display: block;*/
+=======
+
+.cls_studypackbtn {
+	font-weight: 800;
+}
+
+.cls_indexbtncolor {
+	color: #1e8cf1 !important;
+	font-weight: 600;
+}
+
+.cls_indexpadding {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+.cls_cardheight {
+	height: 84vh;
+	position: fixed;
+}
+
+.cls_aboutbtn {
+	outline: none !important;
+}
+
+.cls_fontbold {
+	font-weight: bolder;
+}
+
+.cls_center {
+	text-align: center;
+}
+
+.buttons {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	height: 260px;
+	margin-top: -130px;
+	margin-left: -250px;
+	text-align: center;
+}
+
+.btn {
+	display: inline-block;
+	min-width: 110px;
+	margin: 15px 5px;
+	padding: 10px 15px 12px;
+	font: 700 12px/1;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 1px rgba(0, 0, 0, 0.1), inset 0 -10px 20px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+}
+
+.btn.sec {
+	color: white;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	background: #1e8cf1;
+}
+
+.btn.sec:hover {
+	background: #1e8cf1;
+}
+
+.btn.pri {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn.sec.ico:before
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 30px;
+	padding: 10px 0 12px;
+	font-family: 'hurme_no2-webfont' !important;
+	text-align: center;
+	border-radius: 3px 0 0 3px;
+	background: rgba(0, 0, 0, 0.15);
+}
+
+.cls_outline {
+	outline: none !important;
+}
+
+.cls_imagemargin {
+	margin-top: 4%;
+<<<<<<< HEAD
+}
+
+.cls_sizedire {
+	font-size: 17px !important;
+=======
+>>>>>>> 0b617ffea21e9a9118f83c7a169886ef51fd4531
+>>>>>>> 6591a75db84a1ad9c74fad9d851e221967f1215a
+}

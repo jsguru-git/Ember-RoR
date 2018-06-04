@@ -1,0 +1,28 @@
+<article class="listing" style="width: 388.328px;">
+    {{#if pack.image}}
+        <div class="back_image" style="background-image: url({{pack.image}})"></div>
+        <div class="detailed_pack cls_style col-sm-12">
+            <span class="cls_style col-sm-3">{{pack.terms}} terms</span>
+            <span class="cls_style col-sm-3">{{pack.category}}</span>
+            <a href="#" class="user col-sm-6 cls_underimg">
+                <img src="{{pack.userimage}}" style="width: 16px; height:16px; float:left;" class="img-rounded img-responsive">
+                <span>{{pack.owner}}</span>
+            </a>
+        </div>
+        <div class="cls_content">
+            <h4 class="cls_style cls_h3">{{pack.title}}</h4>
+        </div>
+    {{else}}
+        <div class="detailed_pack cls_style col-sm-12">
+            <span class="cls_style col-sm-3">{{pack.terms}} terms</span>
+            <span class="cls_style col-sm-3">{{pack.category}}</span>
+            <a href="#" class="user col-sm-6 cls_undernone cls_indexpadding">
+                <img src="{{pack.userimage}}" style="width: 16px; height:16px; float:left;" class="img-rounded img-responsive">
+                <span>{{pack.owner}}</span>
+            </a>
+        </div>
+        <div class="cls_content">
+            <h4 class="cls_style cls_h3">{{pack.title}}</h4>
+        </div>
+    {{/if}}
+</article>

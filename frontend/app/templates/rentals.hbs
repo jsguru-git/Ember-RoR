@@ -1,0 +1,117 @@
+<div class="container">
+	<h1 class="cls_createfont">Create a study pack</h1>
+	<div class="row short_description">
+		{{input type="text" value=title class="title col-sm-5" placeholder="Title of study pack"}}
+		{{input type="text" value=description class="title col-sm-5" placeholder="Description of study pack"}}
+	</div>
+	<div class="row options">
+		<div class="col-sm-4 toggle">
+			<div class="row cls_toggle">
+				{{x-toggle
+					class="col-sm-7 cls_toggle1"
+		            offLabel='Public'
+		            onLabel='Private'
+		            showLabels=true
+		            value=actionBound
+		            onToggle=(action (mut actionBound))
+	          	}}
+	          	{{input class="col-sm-5 cls_toggleinput1" disabled=true value=actionBound}}
+	        </div>
+	        <div class="row">
+				{{x-toggle
+					class="col-sm-7 cls_toggle2"
+		            offLabel='Me'
+		            onLabel='Group'
+		            showLabels=true
+		            value=actionBounds
+		            onToggle=(action (mut actionBounds))
+	          	}}
+	          	{{input class="col-sm-5 cls_toggleinput2" disabled=true value=actionBounds}}
+	        </div>
+		</div>
+		<div class="col-sm-4 users cls_power">
+			<h3 class="cls_hurmefont">Users</h3>
+			{{#power-select
+				class="cls_powerselect"
+  				options=userOptions
+  				placeholder="Select a user"
+  				selected=selectedFilter
+  				searchEnabled=false
+  				onchange=(action (mut selectedFilter))
+  				as |filter| }}
+  				{{filter.name}}
+			{{/power-select}}
+		</div>
+		<div class="col-sm-4 invite cls_power">
+			<h3 class="cls_hurmefont">Invite</h3>
+			{{#power-select
+				class="cls_powerselect"
+  				options=inviteOptions
+  				placeholder="Invite a person"
+  				selected=selectFilter
+  				searchEnabled=false
+  				onchange=(action (mut selectFilter))
+  				as |filter| }}
+  				{{filter.name}}
+			{{/power-select}}
+		</div>
+	</div>
+	<div class="questions cls_question">
+		<h2 class="cls_createfont">Question and Answer</h2>
+	</div>
+	{{#list-filter filter=(action 'filterByCity') as |filteredResults|}}
+  		<ul class="results">
+    		{{#each filteredResults as |rentalUnit|}}
+      			<li>{{rental-listing rental=rentalUnit}}</li>
+    		{{/each}}
+  		</ul>
+	{{/list-filter}}
+	<div class="line"></div>
+	<div class="row add_question">
+		<h2 class="cls_createfont cls_addquestion">Add your questions</h2>
+		<div class="col-sm-6 row">
+	        <span class="col-sm-1">Q:</span>
+	        <div class="question col-sm-10">
+	        	{{input type="text" value=question class="input_question col-sm-12" placeholder="Write your question"}}
+	        </div>
+    	</div>
+    	<div class="col-sm-6 row">
+	        <span class="col-sm-1">A:</span>
+	        <div class="answer col-sm-10">
+	        	{{input type="text" value=answer class="input_answer col-sm-10" placeholder="Write your answer"}}
+	        	<img class="answer_image" src="../public/assets/image/image.png">
+	        </div>
+    	</div>
+	</div>
+	<div class="row add_question">
+		<div class="col-sm-6 row">
+	        <span class="col-sm-1">Q:</span>
+	        <div class="question col-sm-10">
+	        	{{input type="text" value=question class="input_question col-sm-12" placeholder="Write your question"}}
+	        </div>
+    	</div>
+    	<div class="col-sm-6 row">
+	        <span class="col-sm-1">A:</span>
+	        <div class="answer col-sm-10">
+	        	{{input type="text" value=answer class="input_answer col-sm-10" placeholder="Write your answer"}}
+	        	<img class="answer_image" src="../public/assets/image/image.png">
+	        </div>
+    	</div>
+	</div>
+	<div class="row add_question">
+		<div class="col-sm-6 row">
+	        <span class="col-sm-1">Q:</span>
+	        <div class="question col-sm-10">
+	        	{{input type="text" value=question class="input_question col-sm-12" placeholder="Write your question"}}
+	        </div>
+    	</div>
+    	<div class="col-sm-6 row">
+	        <span class="col-sm-1">A:</span>
+	        <div class="answer col-sm-10">
+	        	{{input type="text" value=answer class="input_answer col-sm-10" placeholder="Write your answer"}}
+	        	<img class="answer_image" src="../public/assets/image/image.png">
+	        </div>
+    	</div>
+	</div>
+	<button type="button" class="cls_btncreate btn btn-lg btn-success"><span class="cls_createbtn">Create</span></button>
+</div>

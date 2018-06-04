@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Frontend</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{content-for "head"}}
+
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/frontend.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<<<<<<< HEAD
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+=======
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+>>>>>>> 6591a75db84a1ad9c74fad9d851e221967f1215a
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    {{content-for "head-footer"}}
+  </head>
+  <body>
+    <div class="container-fluid header">
+        <!-- <div class="container"> -->
+            <div>
+                <div class="d_logo">
+                    <nav class="navbar">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a href="#">
+                                    <img src="../public/assets/image/discourse.png">
+                                </a>
+                            </div>
+                            <ul class="nav navbar-nav navbar-right">
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle cls_aboutbtn cls_hurmefont" type="button" data-toggle="dropdown">About</button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">AAA</a></li>
+                                        <li><a href="#">AAA</a></li>
+                                        <li><a href="#">AAA</a></li>
+                                    </ul>
+                                </div>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        <!-- </div> -->
+    </div>
+    {{content-for "body"}}
+
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/frontend.js"></script>
+
+    {{content-for "body-footer"}}
+  </body>
+</html>

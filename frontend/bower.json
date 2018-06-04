@@ -1,0 +1,8 @@
+{
+  "name": "frontend",
+  "dependencies": {
+    "jquery.event.move": "^1.3.6",
+    "unslider": "https://github.com/idiot/unslider.git#master",
+    "slick-carousel": "^1.8.1"
+  }
+}

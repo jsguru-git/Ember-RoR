@@ -1,0 +1,65 @@
+<div class="introduction">
+    <div class="tools">
+        <div class="splash">
+            <h1 class="heading">Simple tools for learning anything.</h1>
+            <p>Search millions of study sets or create your own. Improve your grades by studying with flashcards, games and more</p>
+        </div>
+        <button type="button" class="started btn btn-primary btn-block" style="padding: 20px;font-size: 25px;">Get Started</button>
+    </div>
+</div>
+<div class="second_body">
+     <img class="img-responsive" src="../public/assets/image/introduction.png" alt="Chania"> 
+</div>
+
+<div class="container widget">
+    <div class="row">
+        <div class="col-sm-4 col-md-4">
+            <div>
+                {{#link-to "rentals"}}
+                    <div class="create">
+                        <span class="cls_indexbtncolor cls_studypackbtn">+ Create <br>A Study Pack</span>
+                    </div>
+                {{/link-to}}
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4">
+            <div>
+                <div class="edit">
+                    {{#link-to "start"}}
+                        <div class="cls_indexbtncolor">Computer Science</div>
+                    {{/link-to}}
+                    {{#link-to "start"}}
+                        <div class="cls_indexbtncolor">Maths</div>
+                    {{/link-to}}
+                    {{#link-to "start"}}
+                        <div class="cls_indexbtncolor">Linguistics</div>
+                    {{/link-to}}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4">
+            <div>
+                <div class="edit">
+                    {{#link-to "rentals"}}
+                        <div class="cls_indexbtncolor">Computer Science</div>
+                    {{/link-to}}
+                    {{#link-to "rentals"}}
+                        <div class="cls_indexbtncolor">Maths</div>
+                    {{/link-to}}
+                    {{#link-to "rentals"}}
+                        <div class="cls_indexbtncolor">Linguistics</div>
+                    {{/link-to}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{#question-filter filter=(action 'filterByOwner') as |filteredResults|}}
+	<div class="results" style="column-count: 3;">
+		{{#each filteredResults as |packUnit|}}
+			<div>
+				{{pack-listing pack=packUnit}}
+			</div>
+		{{/each}}
+	</div>
+{{/question-filter}}

@@ -1,0 +1,127 @@
+<script>
+	var playpause = true;
+</script>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-2 sidebar cls_fullheight">
+			<div class="cards">
+				<h3 class="cls_fontfamily" style="color: #3ccfcf;">CARDS</h3>
+				<div class="progress-bar-striped active" id="myProgress">
+					<div class="progress-bar-striped active" id="myBar"></div>
+				</div>
+				<div class="rate">
+					<span>Progress</span>
+					<span id="log">1</span>/<span>14</span>
+				</div>
+			</div>
+			<div class="button_group">
+				<div><button id="playpause" type="button" class="cls_outline btn btn-default">
+						<span class="glyphicon glyphicon-play"></span> <span>Play</span>
+					</button>
+				</div>
+				<div><button id="shuffle" onclick="move()" type="button" class="cls_outline btn btn-default"><span class="glyphicon glyphicon-random"></span> Shuffle</button></div>
+				<div><button id="option" onclick="move()" type="button" class="cls_outline btn btn-default"><span class="glyphicon glyphicon-tasks"></span> Options</button></div>
+			</div>
+		</div>
+<<<<<<< HEAD
+		<div class="col-sm-2"></div>
+		<div class="col-sm-6">
+			<h1 class="flash_header cls_fontfamily cls_fontweight">My FlashCard</h1>
+			{{#carousel-container transitionInterval=400 as |ui controls|}}
+  				<div class="carousel-body">
+				    {{#each model as |flashcardUnit|}}
+				    	{{#ui.item}}
+						    {{flashcard-listing flashcard=flashcardUnit}}
+						{{/ui.item}}
+					{{/each}}
+  				</div>
+  				<div class="cls_center">
+	  				<button class='btn sec ico cls_outline' onclick={{controls.previous}}><i class="fa fa-angle-double-left cls_sizedire"></i> Slide Left</button>
+	  				<button class='btn sec ico cls_outline' onclick={{controls.next}}><i class="fa fa-angle-double-right cls_sizedire"></i> Slide Right</button>
+  				</div>
+  			{{/carousel-container}}
+=======
+		<div class="col-sm-1"></div>
+		<div class="col-sm-7">
+			<h1 class="flash_header cls_fontfamily cls_flashcardheader">My FlashCard</h1>
+			<div class="slider-for">
+				{{#each model as |flashcardUnit|}}
+			  		{{flashcard-listing flashcard=flashcardUnit}}
+			  	{{/each}}
+			</div>
+			<div class="slider-nav">
+				{{#each model as |flashcardUnit|}}
+			  		{{flashcard-listing flashcard=flashcardUnit}}
+			  	{{/each}}
+			</div>
+>>>>>>> 6591a75db84a1ad9c74fad9d851e221967f1215a
+		</div>
+	</div>	
+</div>
+
+<script>
+	$(document).ready(function(){
+		var count = $('.slider-for').children().length;
+		console.log(count);
+		$('.slider-for').slick({
+      		infinite: true,
+      		speed: 500,
+      		adaptiveHeight: true,
+      		asNavFor: '.slider-nav'
+      	});
+      	$('.slider-nav').slick({
+  			slidesToShow: 3,
+  			slidesToScroll: 1,
+  			asNavFor: '.slider-for',
+  			centerMode: true,
+  			focusOnSelect: true
+		});
+		$('.slider-for').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  			$('#log').text(nextSlide+1);
+  			console.log(nextSlide+1);
+  			var width1 = $('#myBar').width();
+  			width1=(nextSlide+1)/3 * $('#myProgress').width();
+  			$('#myBar').animate({
+	            width: width1
+	            }, function() {
+	             	$(this).css('background-color', 'green');
+	                $('#myBar').attr('disabled', true);
+	        });
+  			console.log(width1);
+		});
+
+		var maxWidth = $('#myProgress').width();
+	    var duration = 10000;
+	    var $log = $('#log');
+	    var $playpause = $('#playpause');
+	    var $stop = $('#stop');
+	    var timer;
+
+	    $playpause.on('click', function() {
+	        playpause = !playpause;
+	        if(playpause){
+	        	$('#playpause span:last-child').text("Play");
+	        	$('.slider-for').slick('slickPause');
+	            var $myBar = $('#myBar');
+	            $myBar.stop();
+
+	            clearInterval(timer);
+
+	            var w = $myBar.width();
+	            var percent = parseInt((w * 100) / maxWidth);
+	        }
+	        else {
+	        	$('.slider-for').slick('slickPlay');
+	        	$('#playpause span:last-child').text("Pause");
+	        	var $myBar = $('#myBar');
+	            Horloge(maxWidth);
+	            timer = setInterval('Horloge('+maxWidth+')', 200);
+	            console.log(timer);
+	        }
+	    });
+    });
+    function Horloge(maxWidth) {
+	    var w = $('#myBar').width();
+	    var percent = parseInt((w * 100) / maxWidth);
+	}
+</script>
